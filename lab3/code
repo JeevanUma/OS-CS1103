@@ -1,0 +1,13 @@
+#!/bin/bash
+# Basic Shell Script for Job Scheduling
+# Usage: ./job_scheduler.sh <delay_in_seconds> "command1" "command2" ...
+# Check if sufficient arguments are provided
+if [ "$#" -lt 3 ]; then
+echo "Usage: $0 <delay_in_seconds> \"command1\" \"command2\"\"command3\" ..."
+exit 1
+fi
+for command in "$@"; do
+echo "Executing: $command"
+echo "$command" # Execute the command
+done
+echo "All commands executed."
